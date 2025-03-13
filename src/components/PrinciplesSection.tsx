@@ -117,7 +117,7 @@ const PrinciplesSection = () => {
               style={{ transitionDelay: `${Math.min(index * 100, 500)}ms` }}
             >
               <CardContent className="p-6">
-                <div className="text-2xl font-bold text-primary/70 mb-3">{principle.number}</div>
+                <div className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB]">{principle.number}</div>
                 <h3 className="text-lg font-semibold mb-2">{principle.title}</h3>
                 <p className="text-muted-foreground text-sm">{principle.description}</p>
               </CardContent>

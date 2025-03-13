@@ -118,3 +118,15 @@
 .text-balance {
   text-wrap: balance;
 }
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB];
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-[#3599E2] to-[#FFA4FB];
+}
+
+.gradient-border {
+  border-image: linear-gradient(to right, #3599E2, #FFA4FB) 1;
+}

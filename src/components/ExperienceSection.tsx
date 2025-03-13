@@ -1,20 +1,25 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Card, CardContent } from '@/components/ui/card';
 
 const experiences = [
   {
-    company: "NAILTED · HR Tech / Employee Engagement",
-    content: "Como **Product** **Designer** en **Nailted**, teníamos la misión de mejorar el bienestar de las personas en su entorno laboral, era fundamental generar un impacto real y positivo. En este tipo de contexto, el diseño no se trata solo de crear interfaces atractivas, sino de construir experiencias humanas, funcionales y empáticas que ayuden a los usuarios a que se sientan escuchados y apoyados."
+    company: "NAILTED",
+    sector: "HR Tech / Employee Engagement",
+    content: "Como **Product** **Designer** en **Nailted**, teníamos la misión de mejorar el bienestar de las personas en su entorno laboral, era fundamental generar un impacto real y positivo. En este tipo de contexto, el diseño no se trata solo de crear interfaces atractivas, sino de construir experiencias humanas, funcionales y empáticas que ayuden a los usuarios a que se sientan escuchados y apoyados.",
+    color: "bg-blue-100"
   },
   {
-    company: "Lola Market / Glovo · E-commerce / Marketplace",
-    content: "Como **Product Designer** en **Lola Market** (empresa que posteriormente fue adquirida por **Glovo**), creamos una experiencia fluida y efectiva que beneficiara tanto a los **usuarios finales**, quienes realizaban la compra desde su casa, como a los **shoppers**, responsables de recoger y entregar los pedidos. Lo más importante era entender cuales eran los retos del comercio online, optimizar la logística y garantizar que, tanto los clientes como los shoppers, tuvieran una experiencia positiva."
+    company: "Lola Market / Glovo",
+    sector: "E-commerce / Marketplace",
+    content: "Como **Product Designer** en **Lola Market** (empresa que posteriormente fue adquirida por **Glovo**), creamos una experiencia fluida y efectiva que beneficiara tanto a los **usuarios finales**, quienes realizaban la compra desde su casa, como a los **shoppers**, responsables de recoger y entregar los pedidos. Lo más importante era entender cuales eran los retos del comercio online, optimizar la logística y garantizar que, tanto los clientes como los shoppers, tuvieran una experiencia positiva.",
+    color: "bg-yellow-100"
   },
   {
-    company: "Finizens · Fintech / Wealth Management",
-    content: "Como **Product Designer** en **Finizens**, una fintech centrada en la inversión pasiva, mi trabajo estuvo orientado a ayudar a los usuarios a gestionar su dinero de forma segura y transparente, con un enfoque diferente al modelo de inversión tradicional. Debíamos ofrecer una experiencia que combinara **transparencia, simplicidad y seguridad**, ayudando a los usuarios a confiar en un modelo de inversión muy diferente al tradicional."
+    company: "Finizens",
+    sector: "Fintech / Wealth Management",
+    content: "Como **Product Designer** en **Finizens**, una fintech centrada en la inversión pasiva, mi trabajo estuvo orientado a ayudar a los usuarios a gestionar su dinero de forma segura y transparente, con un enfoque diferente al modelo de inversión tradicional. Debíamos ofrecer una experiencia que combinara **transparencia, simplicidad y seguridad**, ayudando a los usuarios a confiar en un modelo de inversión muy diferente al tradicional.",
+    color: "bg-purple-100"
   }
 ];
 
@@ -69,24 +74,28 @@ const ExperienceSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="space-y-8 max-w-4xl mx-auto">
           {experiences.map((experience, index) => (
-            <Card 
+            <div 
               key={index}
               className={cn(
-                "glass-card border-none overflow-hidden hover-scale section-transition transform translate-y-6",
-                isVisible && 'appear transform-none'
+                "glass-card border-none rounded-xl overflow-hidden hover-scale section-transition",
+                isVisible && 'appear',
+                experience.color
               )}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <CardContent className="p-6">
-                <h3 className="text-lg font-semibold mb-4">{experience.company}</h3>
+              <div className="p-6">
+                <div className="flex flex-col md:flex-row justify-between mb-4">
+                  <h3 className="text-lg font-semibold">{experience.company}</h3>
+                  <span className="text-sm font-medium text-muted-foreground mt-1 md:mt-0">{experience.sector}</span>
+                </div>
                 <div 
                   className="text-muted-foreground text-sm"
                   dangerouslySetInnerHTML={{ __html: formatText(experience.content) }}
                 />
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
