@@ -130,3 +130,88 @@
 .gradient-border {
   border-image: linear-gradient(to right, #3599E2, #FFA4FB) 1;
 }
+
+/* New gradient button styles */
+.gradient-btn {
+  @apply relative overflow-hidden text-white font-medium;
+  background: linear-gradient(90deg, #3599E2, #FFA4FB);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  @apply shadow-lg;
+  background: linear-gradient(90deg, #3599E2, #FFA4FB, #3599E2);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Hero background animation */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.animated-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(53, 153, 226, 0.05) 0%, rgba(255, 164, 251, 0.05) 50%, rgba(255, 255, 255, 0) 70%);
+  animation: rotate 25s linear infinite;
+}
+
+.animated-bg::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 164, 251, 0.03) 0%, rgba(53, 153, 226, 0.03) 40%, rgba(255, 255, 255, 0) 60%);
+  animation: rotate 20s linear infinite reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating elements animation */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

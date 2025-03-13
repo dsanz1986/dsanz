@@ -36,7 +36,7 @@ const NavBar = () => {
           className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80"
         >
           <span className="sr-only">Inicio</span>
-          <span className="font-bold">David</span>
+          <span className="font-bold gradient-text">David</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-8 mx-auto">
@@ -64,7 +64,7 @@ const NavBar = () => {
           href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing" 
           target="_blank"
           rel="noopener noreferrer" 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium transition-colors hover:bg-secondary/80"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn"
         >
           Currículum
           <Download size={16} />

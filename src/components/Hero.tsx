@@ -32,9 +32,12 @@ const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="min-h-screen flex flex-col justify-center pt-24 pb-16"
+      className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative overflow-hidden"
     >
-      <div className="container">
+      {/* Animated background */}
+      <div className="animated-bg"></div>
+      
+      <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div className={cn(
             'order-2 md:order-1 transform transition-all duration-700 ease-out',
@@ -52,7 +55,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn"
               >
                 Contactar
                 <Mail size={18} />
@@ -83,7 +86,7 @@ const Hero = () => {
             </div>
           </div>
           <div className={cn(
-            'order-1 md:order-2 transition-all duration-700 ease-out',
+            'order-1 md:order-2 transition-all duration-700 ease-out float',
             isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           )} style={{ transitionDelay: '200ms' }}>
             <div className="glass-card rounded-2xl p-2 md:p-4 rotate-1 shadow-lg">
