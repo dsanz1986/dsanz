@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import AboutSection from '@/components/AboutSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import SkillsSection from '@/components/SkillsSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import useScrollReveal from '@/hooks/useScrollReveal';
 
@@ -45,6 +46,7 @@ const Index = () => {
         <AboutSection />
         <PortfolioSection />
         <SkillsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>

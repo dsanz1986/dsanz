@@ -1,6 +1,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { Mail } from 'lucide-react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,25 +44,24 @@ const Hero = () => {
               Diseñador de Producto
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight tracking-tight text-balance">
-              Diseñando experiencias digitales que importan
+              Diseñando experiencias digitales conectando usuarios y negocio
             </h1>
             <p className="text-lg text-muted-foreground mb-8 max-w-md text-balance">
               Desde hace ya unos cuantos años, resolviendo problemas de usuarios y necesidades de negocio a través de productos digitales.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#portfolio"
-                className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+                href="#contacto"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
               >
-                Ver portfolio
+                Contactar
+                <Mail size={18} />
               </a>
               <a
-                href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#portfolio"
                 className="px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors font-medium"
               >
-                Descargar CV
+                Ver portfolio
               </a>
             </div>
           </div>
@@ -71,7 +71,7 @@ const Hero = () => {
           )} style={{ transitionDelay: '200ms' }}>
             <div className="glass-card rounded-2xl p-2 md:p-4 rotate-1 shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+                src="/lovable-uploads/f8cfa364-d1ed-4107-a8df-a4f24688d2f0.png"
                 alt="David Sanz - Diseñador de Producto"
                 className="rounded-xl w-full aspect-square md:aspect-[4/5] object-cover animate-blur-in"
               />
