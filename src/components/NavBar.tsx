@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import { Download } from 'lucide-react';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,31 +36,39 @@ const NavBar = () => {
           className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80"
         >
           <span className="sr-only">Inicio</span>
-          <span className="font-bold">David Sanz</span>
+          <span className="font-bold">David</span>
         </Link>
         
-        <nav className="flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 mx-auto">
           <a 
-            href="#portfolio" 
+            href="#sobre-mi" 
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Portfolio
+            Sobre mí
           </a>
           <a 
-            href="#habilidades" 
+            href="#proyectos" 
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Habilidades
+            Proyectos
           </a>
           <a 
-            href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing" 
-            target="_blank"
-            rel="noopener noreferrer" 
+            href="#principios" 
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
-            Currículum
+            Principios
           </a>
         </nav>
+
+        <a 
+          href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing" 
+          target="_blank"
+          rel="noopener noreferrer" 
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium transition-colors hover:bg-secondary/80"
+        >
+          Currículum
+          <Download size={16} />
+        </a>
       </div>
     </header>
   );
