@@ -1,7 +1,8 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import ProjectCard from './ProjectCard';
+import SectionHeader from './common/SectionHeader';
+import ProjectsGrid from './projects/ProjectsGrid';
 
 const projects = [
   {
@@ -65,29 +66,14 @@ const PortfolioSection = () => {
           <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
             Proyectos destacados
           </span>
-          <h2 className={cn(
-            "text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ease-out",
-            isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-6"
-          )}>
-            Mi Portfolio
-          </h2>
-          <p className={cn(
-            "text-muted-foreground text-lg max-w-xl mx-auto transition-all duration-700 ease-out",
-            isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-6"
-          )} style={{ transitionDelay: '100ms' }}>
-            Una selección de los proyectos en los que he trabajado recientemente
-          </p>
+          <SectionHeader 
+            title="Mi Portfolio" 
+            description="Una selección de los proyectos en los que he trabajado recientemente" 
+            isVisible={isVisible} 
+          />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              index={index}
-              {...project}
-            />
-          ))}
-        </div>
+        <ProjectsGrid projects={projects} />
 
         <div className={cn(
           "mt-16 text-center transition-all duration-700 ease-out",
