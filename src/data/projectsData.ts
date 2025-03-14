@@ -13,25 +13,25 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
   "case-study": [
     {
       title: "Lola Market",
-      description: "Diseño UX/UI para plataforma de compra online de supermercado",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Lola-Market-19dc0bb1a60381118d77c1831dcc3321?image=true",
       link: "https://dsanz.me/dsanz/Lola-Market-19dc0bb1a60381118d77c1831dcc3321"
     },
     {
       title: "Terra Pastos",
-      description: "Diseño UX/UI para plataforma de gestión agrícola sostenible",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Terra-Pastos-19dc0bb1a60381f6b723e0a62f2671fc?image=true",
       link: "https://dsanz.me/dsanz/Terra-Pastos-19dc0bb1a60381f6b723e0a62f2671fc"
     },
     {
       title: "Wezone",
-      description: "Plataforma para gestión y reserva de espacios deportivos",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Wezone-19dc0bb1a60381b8a657eaa8f7659a5d?image=true",
       link: "https://dsanz.me/dsanz/Wezone-19dc0bb1a60381b8a657eaa8f7659a5d"
     },
     {
       title: "FitTasty",
-      description: "App de recetas y nutrición para deportistas",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a6038107acd8f642dd17319a?image=true",
       link: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a6038107acd8f642dd17319a"
     }
@@ -39,25 +39,25 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
   "side-projects": [
     {
       title: "WOD Time",
-      description: "Aplicación para seguimiento de entrenamientos CrossFit",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e?image=true",
       link: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e"
     },
     {
       title: "InCity",
-      description: "Concepto de app para descubrir eventos locales",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/inCity-19dc0bb1a60381d18924db26fb4fcc83?image=true",
       link: "https://dsanz.me/dsanz/inCity-19dc0bb1a60381d18924db26fb4fcc83"
     },
     {
       title: "Everbook",
-      description: "Plataforma para compartir y descubrir libros",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Everbook-19dc0bb1a603815ab602ef8627e8f1c4?image=true",
       link: "https://dsanz.me/dsanz/Everbook-19dc0bb1a603815ab602ef8627e8f1c4"
     },
     {
       title: "EeOoo",
-      description: "Red social para compartir experiencias musicales",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/EeeOoo-19dc0bb1a60381279487e929ec6a9de2?image=true",
       link: "https://dsanz.me/dsanz/EeeOoo-19dc0bb1a60381279487e929ec6a9de2"
     }
@@ -65,25 +65,25 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
   "ui-concept": [
     {
       title: "Fifa World Cup Russia 2018",
-      description: "Concepto de interfaz para seguimiento del mundial",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132?image=true",
       link: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132"
     },
     {
       title: "Playlist Spotify con Suno IA",
-      description: "Concepto visual para integración de IA en Spotify",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Playlist-Spotify-con-Suno-IA-19dc0bb1a6038148a096d47c120a2ddb?image=true",
       link: "https://dsanz.me/dsanz/Playlist-Spotify-con-Suno-IA-19dc0bb1a6038148a096d47c120a2ddb"
     },
     {
       title: "Vofy",
-      description: "Concepto de app para votaciones colaborativas",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Vofy-19dc0bb1a603813c8cfcde94b3deb5bb?image=true",
       link: "https://dsanz.me/dsanz/Vofy-19dc0bb1a603813c8cfcde94b3deb5bb"
     },
     {
       title: "SOMOSDSGN",
-      description: "Concepto de plataforma para diseñadores",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/SOMOSDSGN-51d778f082724b5a82f4951834c262a4?image=true",
       link: "https://dsanz.me/dsanz/SOMOSDSGN-51d778f082724b5a82f4951834c262a4"
     }
@@ -91,13 +91,13 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
   "design-system": [
     {
       title: "Backoffice",
-      description: "Sistema de diseño para panel de administración",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Backoffice-19dc0bb1a60381a69d89c38f8a8b7f5e?image=true",
       link: "https://dsanz.me/dsanz/Backoffice-19dc0bb1a60381a69d89c38f8a8b7f5e"
     },
     {
       title: "Style Guide FitTasty",
-      description: "Sistema de diseño para aplicación de nutrición",
+      description: "",
       imageUrl: "https://dsanz.me/dsanz/Style-Guide-FitTasty-19dc0bb1a60381558a71d60cad1385a3?image=true",
       link: "https://dsanz.me/dsanz/Style-Guide-FitTasty-19dc0bb1a60381558a71d60cad1385a3"
     }

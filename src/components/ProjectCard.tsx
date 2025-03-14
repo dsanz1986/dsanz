@@ -10,7 +10,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-const ProjectCard = ({ title, description, imageUrl, link, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, imageUrl, link, index }: ProjectCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -55,8 +55,7 @@ const ProjectCard = ({ title, description, imageUrl, link, index }: ProjectCardP
           />
         </div>
         <div className="p-6">
-          <h3 className="text-lg font-semibold mb-2">{title}</h3>
-          <p className="text-muted-foreground text-sm">{description}</p>
+          <h3 className="text-lg font-semibold">{title}</h3>
         </div>
       </a>
     </div>
