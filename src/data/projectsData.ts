@@ -1,4 +1,3 @@
-
 // Project data categorized by type
 export interface Project {
   title: string;
@@ -14,7 +13,7 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "Lola Market",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/Lola-Market-19dc0bb1a60381118d77c1831dcc3321?image=true",
+      imageUrl: "/lovable-uploads/f70514fc-0d07-4fe1-9f57-1f88bc639a3c.png",
       link: "https://dsanz.me/dsanz/Lola-Market-19dc0bb1a60381118d77c1831dcc3321"
     },
     {
@@ -32,8 +31,8 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "FitTasty",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a6038107acd8f642dd17319a?image=true",
-      link: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a6038107acd8f642dd17319a"
+      imageUrl: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a60381107acd8f642dd17319a?image=true",
+      link: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a60381107acd8f642dd17319a"
     }
   ],
   "side-projects": [
