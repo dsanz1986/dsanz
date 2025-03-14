@@ -1,3 +1,4 @@
+
 // Project data categorized by type
 export interface Project {
   title: string;
@@ -19,19 +20,19 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "Terra Pastos",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/Terra-Pastos-19dc0bb1a60381f6b723e0a62f2671fc?image=true",
+      imageUrl: "/lovable-uploads/ce8e0e3d-c821-4885-b144-95b371e6301b.png", // Imagen de vacas en campo
       link: "https://dsanz.me/dsanz/Terra-Pastos-19dc0bb1a60381f6b723e0a62f2671fc"
     },
     {
       title: "Wezone",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/Wezone-19dc0bb1a60381b8a657eaa8f7659a5d?image=true",
+      imageUrl: "/lovable-uploads/ab61593c-ad73-4f96-9258-bfb82ad74619.png", // Imagen de gimnasio crossfit
       link: "https://dsanz.me/dsanz/Wezone-19dc0bb1a60381b8a657eaa8f7659a5d"
     },
     {
       title: "FitTasty",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a60381107acd8f642dd17319a?image=true",
+      imageUrl: "/lovable-uploads/73f88ee9-a074-4f50-8802-ffdc91fa4d57.png", // Imagen de app de comida saludable
       link: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a60381107acd8f642dd17319a"
     }
   ],
@@ -39,7 +40,7 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "WOD Time",
       description: "",
-      imageUrl: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e?image=true",
+      imageUrl: "/lovable-uploads/2b13d090-b75e-43ef-a551-50222fb054db.png", // Imagen de pesas
       link: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e"
     },
     {
