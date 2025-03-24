@@ -184,6 +184,32 @@
   animation: gradient-shift 3s ease infinite;
 }
 
+.gradient-btn-blue {
+  @apply relative overflow-hidden text-white font-medium;
+  background: linear-gradient(90deg, #0EA5E9, #38BDF8);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn-blue:hover {
+  @apply shadow-lg;
+  background: linear-gradient(90deg, #0EA5E9, #38BDF8, #0EA5E9);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.gradient-btn-pink {
+  @apply relative overflow-hidden text-white font-medium;
+  background: linear-gradient(90deg, #EC4899, #F472B6);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn-pink:hover {
+  @apply shadow-lg;
+  background: linear-gradient(90deg, #EC4899, #F472B6, #EC4899);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
