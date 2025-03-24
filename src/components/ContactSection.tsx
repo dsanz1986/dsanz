@@ -48,7 +48,7 @@ const ContactSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:dsanzux@gmail.com"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn-orange w-full sm:w-auto justify-center"
             >
               <Mail size={18} />
               Enviar un email

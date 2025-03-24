@@ -64,7 +64,7 @@ const NavBar = () => {
           href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing" 
           target="_blank"
           rel="noopener noreferrer" 
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn-green"
         >
           Currículum
           <Download size={16} />

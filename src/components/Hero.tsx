@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn-purple"
               >
                 Contactar
                 <Mail size={18} />
