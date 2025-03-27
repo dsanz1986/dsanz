@@ -64,7 +64,7 @@ const Hero = () => {
                 href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors font-medium"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn-purple"
               >
                 Ver Currículum
                 <svg
