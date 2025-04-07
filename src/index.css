@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -144,18 +145,37 @@
   animation: gradient-shift 3s ease infinite;
 }
 
-/* New gradient button variations */
-.gradient-btn-purple {
+/* Primary gradient button (purple) */
+.gradient-btn-primary {
   @apply relative overflow-hidden text-white font-medium;
   background: linear-gradient(90deg, #8B5CF6, #D946EF);
   transition: all 0.3s ease;
 }
 
-.gradient-btn-purple:hover {
+.gradient-btn-primary:hover {
   @apply shadow-lg;
   background: linear-gradient(90deg, #8B5CF6, #D946EF, #8B5CF6);
   background-size: 200% 100%;
   animation: gradient-shift 3s ease infinite;
+}
+
+/* Secondary gradient button (blue) */
+.gradient-btn-secondary {
+  @apply relative overflow-hidden text-white font-medium;
+  background: linear-gradient(90deg, #0EA5E9, #38BDF8);
+  transition: all 0.3s ease;
+}
+
+.gradient-btn-secondary:hover {
+  @apply shadow-lg;
+  background: linear-gradient(90deg, #0EA5E9, #38BDF8, #0EA5E9);
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Legacy gradient button variations - keeping for backward compatibility */
+.gradient-btn-purple {
+  @apply gradient-btn-primary;
 }
 
 .gradient-btn-green {
@@ -185,16 +205,7 @@
 }
 
 .gradient-btn-blue {
-  @apply relative overflow-hidden text-white font-medium;
-  background: linear-gradient(90deg, #0EA5E9, #38BDF8);
-  transition: all 0.3s ease;
-}
-
-.gradient-btn-blue:hover {
-  @apply shadow-lg;
-  background: linear-gradient(90deg, #0EA5E9, #38BDF8, #0EA5E9);
-  background-size: 200% 100%;
-  animation: gradient-shift 3s ease infinite;
+  @apply gradient-btn-secondary;
 }
 
 .gradient-btn-pink {
@@ -208,6 +219,34 @@
   background: linear-gradient(90deg, #EC4899, #F472B6, #EC4899);
   background-size: 200% 100%;
   animation: gradient-shift 3s ease infinite;
+}
+
+/* Link styles */
+.link-with-icon {
+  @apply flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline underline-offset-2;
+}
+
+.link-with-indicator::before {
+  content: '↗';
+  @apply inline-block mr-1 text-xs;
+}
+
+/* Card hover animation for principles */
+.principle-card {
+  @apply hover:shadow-md transition-transform transition-shadow duration-300 relative;
+  transform-style: preserve-3d;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+}
+
+.principle-card .card-number {
+  transition: transform 0.3s ease;
+}
+
+.principle-card:hover .card-number {
+  transform: scale(1.1);
 }
 
 @keyframes gradient-shift {

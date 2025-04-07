@@ -2,7 +2,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import SectionHeader from './common/SectionHeader';
-import { MicIcon, AwardIcon } from 'lucide-react';
+import { MicIcon, AwardIcon, ExternalLinkIcon, FileTextIcon } from 'lucide-react';
 import { Badge } from './ui/badge';
 
 // Info for achievements, talks, and posts
@@ -107,7 +107,7 @@ const AboutSection = () => {
             <ul className="space-y-3">
               {talks.map((talk, index) => (
                 <li key={index}>
-                  <a href={talk.link} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline text-muted-foreground">
+                  <a href={talk.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
                     {talk.title}
                   </a>
                 </li>
@@ -128,7 +128,7 @@ const AboutSection = () => {
               {achievements.map((achievement, index) => (
                 <li key={index} className="flex items-baseline gap-2">
                   <span>{achievement.emoji}</span>
-                  <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline text-muted-foreground">
+                  <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
                     {achievement.title}
                   </a>
                 </li>
@@ -142,30 +142,14 @@ const AboutSection = () => {
             isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
           )} style={{ transitionDelay: '500ms' }}>
             <div className="flex items-center gap-2 mb-4">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="20" 
-                height="20" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                className="text-[#18134D]"
-              >
-                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2" />
-                <path d="M18 14h-8" />
-                <path d="M15 18h-5" />
-                <path d="M10 6h8v4h-8V6Z" />
-              </svg>
+              <FileTextIcon className="h-5 w-5 text-[#18134D]" />
               <h3 className="text-lg font-semibold">Posts</h3>
             </div>
             <ul className="space-y-3">
               {posts.map((post, index) => (
                 <li key={index} className="flex items-baseline gap-2">
                   <span>{post.emoji}</span>
-                  <a href={post.link} target="_blank" rel="noopener noreferrer" className="text-sm hover:underline text-muted-foreground">
+                  <a href={post.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
                     {post.title}
                   </a>
                 </li>

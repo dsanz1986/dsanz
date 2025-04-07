@@ -99,7 +99,7 @@ const PrinciplesSection = () => {
       <div className="container">
         <div className="text-center mb-16">
           <h2 className={cn(
-            "text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ease-out",
+            "text-3xl md:text-4xl font-bold mb-4 transition-all duration-700 ease-out gradient-text",
             isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-6"
           )}>
             Los 12 Principios de diseño que aplico en mi día
@@ -111,15 +111,21 @@ const PrinciplesSection = () => {
             <Card 
               key={index}
               className={cn(
-                "glass-card border-none overflow-hidden hover-scale section-transition transform translate-y-6",
+                "glass-card border-none overflow-hidden principle-card section-transition transform translate-y-6",
                 isVisible && 'appear transform-none'
               )}
               style={{ transitionDelay: `${Math.min(index * 100, 500)}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB]">{principle.number}</div>
-                <h3 className="text-lg font-semibold mb-2">{principle.title}</h3>
+              <CardContent className="p-6 relative">
+                <div className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB] card-number">{principle.number}</div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center">
+                  {principle.title}
+                </h3>
                 <p className="text-muted-foreground text-sm">{principle.description}</p>
+
+                {/* Decorative elements */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-full -mr-10 -mt-10 opacity-30 transition-transform duration-300 group-hover:scale-110"></div>
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-pink-50 to-blue-50 rounded-full -ml-8 -mb-8 opacity-30"></div>
               </CardContent>
             </Card>
           ))}

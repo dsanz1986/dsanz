@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import SectionHeader from './common/SectionHeader';
 import ProjectsGrid from './projects/ProjectsGrid';
+import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
@@ -83,23 +84,10 @@ const PortfolioSection = () => {
             href="https://www.notion.so/dsanz/David-Sanz-a295b29f93824bfd99445b1db5fd70af?pvs=4#19dc0bb1a603800488a0ceb555fde24c"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn-purple hover:underline"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn-primary hover:underline"
           >
             Ver todos los proyectos
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
+            <ArrowRight size={16} />
           </a>
         </div>
       </div>
