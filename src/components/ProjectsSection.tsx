@@ -57,7 +57,7 @@ const ProjectsSection = () => {
             href="https://www.notion.so/dsanz/David-Sanz-a295b29f93824bfd99445b1db5fd70af?pvs=4#19dc0bb1a603800488a0ceb555fde24c"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg gradient-btn-secondary hover:underline"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium"
           >
             Ver todos los proyectos
             <ArrowRight size={16} />

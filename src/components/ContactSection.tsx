@@ -57,7 +57,7 @@ const ContactSection = () => {
               href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-colors font-medium border border-border w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium w-full sm:w-auto justify-center"
             >
               <Download size={18} />
               Descargar CV

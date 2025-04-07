@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
+import { Sparkles } from 'lucide-react';
 
 const principles = [
   {
@@ -69,6 +70,7 @@ const principles = [
 const PrinciplesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -111,21 +113,46 @@ const PrinciplesSection = () => {
             <Card 
               key={index}
               className={cn(
-                "glass-card border-none overflow-hidden principle-card section-transition transform translate-y-6",
-                isVisible && 'appear transform-none'
+                "glass-card border-none overflow-hidden section-transition transform translate-y-6 transition-all duration-500",
+                isVisible && 'appear transform-none',
+                hoveredCard === index ? "shadow-lg scale-[1.03]" : ""
               )}
               style={{ transitionDelay: `${Math.min(index * 100, 500)}ms` }}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <CardContent className="p-6 relative">
-                <div className="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB] card-number">{principle.number}</div>
-                <h3 className="text-lg font-semibold mb-2 flex items-center">
+              <CardContent className="p-6 relative overflow-hidden group">
+                {/* Animated background gradient */}
+                <div className={cn(
+                  "absolute inset-0 bg-gradient-to-r from-purple-100/30 to-blue-100/30 opacity-0 transition-opacity duration-500",
+                  hoveredCard === index && "opacity-100"
+                )}></div>
+                
+                {/* Animated sparkles */}
+                {hoveredCard === index && (
+                  <>
+                    <Sparkles 
+                      className="absolute right-2 top-2 text-purple-300 animate-pulse" 
+                      size={18} 
+                    />
+                    <Sparkles 
+                      className="absolute left-4 bottom-3 text-blue-300 animate-pulse" 
+                      size={14} 
+                      style={{ animationDelay: "0.5s" }}
+                    />
+                  </>
+                )}
+                
+                <div className={cn(
+                  "text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-[#3599E2] to-[#FFA4FB] transition-transform duration-500",
+                  hoveredCard === index && "scale-110"
+                )}>
+                  {principle.number}
+                </div>
+                <h3 className="text-lg font-semibold mb-2 flex items-center relative z-10">
                   {principle.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{principle.description}</p>
-
-                {/* Decorative elements */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-50 to-purple-50 rounded-full -mr-10 -mt-10 opacity-30 transition-transform duration-300 group-hover:scale-110"></div>
-                <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-pink-50 to-blue-50 rounded-full -ml-8 -mb-8 opacity-30"></div>
+                <p className="text-muted-foreground text-sm relative z-10">{principle.description}</p>
               </CardContent>
             </Card>
           ))}

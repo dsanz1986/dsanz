@@ -12,25 +12,31 @@ export type ProjectCategory = "case-study" | "side-projects" | "ui-concept" | "d
 export const projectsByCategory: Record<ProjectCategory, Project[]> = {
   "case-study": [
     {
-      title: "Lola Market",
+      title: "Lola Market · Mejorando la experiencia de compra online",
       description: "",
       imageUrl: "/lovable-uploads/f70514fc-0d07-4fe1-9f57-1f88bc639a3c.png",
       link: "https://dsanz.me/dsanz/Lola-Market-19dc0bb1a60381118d77c1831dcc3321"
     },
     {
-      title: "Terra Pastos",
+      title: "Nailted IA · Solucionando el problema de la gestión de mensajes",
+      description: "",
+      imageUrl: "/lovable-uploads/eb4dc390-0d4c-4ef1-89bc-279c3c3e0c53.png",
+      link: "https://dsanz.me/dsanz/Nailted-IA-Solucionando-el-problema-de-la-gesti-n-de-mensajes-1bac0bb1a603805fb89af410e7fb0b9a"
+    },
+    {
+      title: "Terra & Pastos · Diseñando alimentación sostenible",
       description: "",
       imageUrl: "/lovable-uploads/ce8e0e3d-c821-4885-b144-95b371e6301b.png",
       link: "https://dsanz.me/dsanz/Terra-Pastos-19dc0bb1a60381f6b723e0a62f2671fc"
     },
     {
-      title: "Wezone",
+      title: "Wezone · Diseño y optimización web",
       description: "",
       imageUrl: "/lovable-uploads/ab61593c-ad73-4f96-9258-bfb82ad74619.png",
       link: "https://dsanz.me/dsanz/Wezone-19dc0bb1a60381b8a657eaa8f7659a5d"
     },
     {
-      title: "FitTasty",
+      title: "FitTasty · Diseñando una app de recetas saludables",
       description: "",
       imageUrl: "/lovable-uploads/73f88ee9-a074-4f50-8802-ffdc91fa4d57.png",
       link: "https://dsanz.me/dsanz/FitTasty-19dc0bb1a60381107acd8f642dd17319a"
@@ -40,45 +46,19 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "WOD Time",
       description: "",
-      imageUrl: "/lovable-uploads/2b13d090-b75e-43ef-a551-50222fb054db.png",
+      imageUrl: "/lovable-uploads/4ff37520-7340-4d43-98f9-47ba0cd2565a.png",
       link: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e"
     },
     {
       title: "InCity",
       description: "",
-      imageUrl: "https://images.unsplash.com/photo-1472437774355-71ab6752b434?w=800&auto=format&fit=crop",
+      imageUrl: "/lovable-uploads/e29b9a74-5a15-4124-9110-5ca3b7846664.png",
       link: "https://dsanz.me/dsanz/inCity-19dc0bb1a60381d18924db26fb4fcc83"
-    },
-    {
-      title: "Everbook",
-      description: "",
-      imageUrl: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&auto=format&fit=crop",
-      link: "https://dsanz.me/dsanz/Everbook-19dc0bb1a603815ab602ef8627e8f1c4"
-    },
-    {
-      title: "EeOoo",
-      description: "",
-      imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop",
-      link: "https://dsanz.me/dsanz/EeeOoo-19dc0bb1a60381279487e929ec6a9de2"
-    }
-  ],
-  "ui-concept": [
-    {
-      title: "Fifa World Cup Russia 2018",
-      description: "",
-      imageUrl: "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?w=800&auto=format&fit=crop",
-      link: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132"
-    },
-    {
-      title: "Playlist Spotify con Suno IA",
-      description: "",
-      imageUrl: "https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=800&auto=format&fit=crop",
-      link: "https://dsanz.me/dsanz/Playlist-Spotify-con-Suno-IA-19dc0bb1a6038148a096d47c120a2ddb"
     },
     {
       title: "Vofy",
       description: "",
-      imageUrl: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&auto=format&fit=crop",
+      imageUrl: "/lovable-uploads/17ce8381-1a98-4a45-9e51-5c22b4d41e00.png",
       link: "https://dsanz.me/dsanz/Vofy-19dc0bb1a603813c8cfcde94b3deb5bb"
     },
     {
@@ -86,6 +66,32 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
       description: "",
       imageUrl: "https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?w=800&auto=format&fit=crop",
       link: "https://dsanz.me/dsanz/SOMOSDSGN-51d778f082724b5a82f4951834c262a4"
+    },
+    {
+      title: "Playlist Spotify con Suno IA",
+      description: "",
+      imageUrl: "/lovable-uploads/8f59834b-4ec5-4905-a66c-df3c1d4c2a46.png",
+      link: "https://dsanz.me/dsanz/Playlist-Spotify-con-Suno-IA-19dc0bb1a6038148a096d47c120a2ddb"
+    }
+  ],
+  "ui-concept": [
+    {
+      title: "Fifa World Cup Russia 2018",
+      description: "",
+      imageUrl: "/lovable-uploads/f8f040f3-d7d7-4745-9529-f1e6a19c5c53.png",
+      link: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132"
+    },
+    {
+      title: "Everbook",
+      description: "",
+      imageUrl: "/lovable-uploads/ecabc4e2-5b81-41ab-b42d-73c76bff0b6c.png",
+      link: "https://dsanz.me/dsanz/Everbook-19dc0bb1a603815ab602ef8627e8f1c4"
+    },
+    {
+      title: "EeOoo",
+      description: "",
+      imageUrl: "/lovable-uploads/5ef8eb17-70b5-4670-8752-cde7fe749efb.png",
+      link: "https://dsanz.me/dsanz/EeeOoo-19dc0bb1a60381279487e929ec6a9de2"
     }
   ],
   "design-system": [

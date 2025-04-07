@@ -76,25 +76,11 @@ const AboutSection = () => {
       <div className="container">
         <SectionHeader 
           title="Sobre mí" 
-          description="Diseñador de producto y UI/UX con más de 7 años de experiencia" 
+          description="Hace más de 7 años decidí dar un giro a mi carrera profesional y le dediqué gran parte de mi energía y tiempo a desarrollarme como Diseñador de producto" 
           isVisible={isVisible} 
         />
         
-        <div className={cn(
-          "max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12 transition-all duration-700 ease-out mb-12",
-          isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
-        )} style={{ transitionDelay: '200ms' }}>
-          <div className="space-y-4 text-muted-foreground">
-            <p>
-              Hace más de 7 años decidí dar un giro a mi carrera profesional y le dediqué gran parte de mi energía y tiempo a desarrollarme como Diseñador de producto, el sector del diseño siempre me ha gustado pero no fue hasta hace unos años cuando quise que lo que más me gustaba se convirtiera en mi trabajo habitual.
-            </p>
-            <p>
-              Mi experiencia se centra en resolver problemas complejos de usuarios y satisfacer necesidades de negocio a través del diseño de productos digitales. Me apasiona crear experiencias que sean tanto funcionales como estéticamente atractivas.
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
           {/* Talks Section */}
           <div className={cn(
             "glass-card rounded-2xl p-6 transition-all duration-700 ease-out",
@@ -107,7 +93,8 @@ const AboutSection = () => {
             <ul className="space-y-3">
               {talks.map((talk, index) => (
                 <li key={index}>
-                  <a href={talk.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
+                  <a href={talk.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
+                    <ExternalLinkIcon className="h-3 w-3" />
                     {talk.title}
                   </a>
                 </li>
@@ -128,7 +115,8 @@ const AboutSection = () => {
               {achievements.map((achievement, index) => (
                 <li key={index} className="flex items-baseline gap-2">
                   <span>{achievement.emoji}</span>
-                  <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
+                  <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
+                    <ExternalLinkIcon className="h-3 w-3" />
                     {achievement.title}
                   </a>
                 </li>
@@ -149,7 +137,8 @@ const AboutSection = () => {
               {posts.map((post, index) => (
                 <li key={index} className="flex items-baseline gap-2">
                   <span>{post.emoji}</span>
-                  <a href={post.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator">
+                  <a href={post.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
+                    <ExternalLinkIcon className="h-3 w-3" />
                     {post.title}
                   </a>
                 </li>
