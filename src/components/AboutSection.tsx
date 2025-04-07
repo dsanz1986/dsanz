@@ -76,9 +76,18 @@ const AboutSection = () => {
       <div className="container">
         <SectionHeader 
           title="Sobre mí" 
-          description="Hace más de 7 años decidí dar un giro a mi carrera profesional y le dediqué gran parte de mi energía y tiempo a desarrollarme como Diseñador de producto" 
+          description="Hace ya unos cuantos años decidí dar un giro a mi carrera profesional y le dediqué gran parte de mi energía y tiempo a desarrollarme como Diseñador de producto, el sector del diseño siempre me ha gustado pero no fue hasta hace unos años cuando quise que lo que más me gustaba se convirtiera en mi trabajo habitual." 
           isVisible={isVisible} 
         />
+        
+        <div className={cn(
+          "max-w-3xl mx-auto mt-8 glass-card rounded-xl p-6 border-l-4 border-primary/50 bg-white/30 backdrop-blur-sm",
+          isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
+        )}>
+          <blockquote className="text-lg md:text-xl italic text-muted-foreground leading-relaxed">
+            "Desde hace ya unos cuantos años, resolviendo problemas de usuarios y necesidades de negocio a través de productos digitales".
+          </blockquote>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
           {/* Talks Section */}
@@ -92,10 +101,17 @@ const AboutSection = () => {
             </div>
             <ul className="space-y-3">
               {talks.map((talk, index) => (
-                <li key={index}>
-                  <a href={talk.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
-                    <ExternalLinkIcon className="h-3 w-3" />
-                    {talk.title}
+                <li key={index} className="group">
+                  <a 
+                    href={talk.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                  >
+                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      <ExternalLinkIcon className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="group-hover:underline">{talk.title}</span>
                   </a>
                 </li>
               ))}
@@ -113,11 +129,17 @@ const AboutSection = () => {
             </div>
             <ul className="space-y-3">
               {achievements.map((achievement, index) => (
-                <li key={index} className="flex items-baseline gap-2">
-                  <span>{achievement.emoji}</span>
-                  <a href={achievement.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
-                    <ExternalLinkIcon className="h-3 w-3" />
-                    {achievement.title}
+                <li key={index} className="group">
+                  <a 
+                    href={achievement.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                  >
+                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      <span>{achievement.emoji}</span>
+                    </span>
+                    <span className="group-hover:underline">{achievement.title}</span>
                   </a>
                 </li>
               ))}
@@ -135,11 +157,17 @@ const AboutSection = () => {
             </div>
             <ul className="space-y-3">
               {posts.map((post, index) => (
-                <li key={index} className="flex items-baseline gap-2">
-                  <span>{post.emoji}</span>
-                  <a href={post.link} target="_blank" rel="noopener noreferrer" className="link-with-icon link-with-indicator inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors hover:underline">
-                    <ExternalLinkIcon className="h-3 w-3" />
-                    {post.title}
+                <li key={index} className="group">
+                  <a 
+                    href={post.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                  >
+                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                      <span>{post.emoji}</span>
+                    </span>
+                    <span className="group-hover:underline">{post.title}</span>
                   </a>
                 </li>
               ))}

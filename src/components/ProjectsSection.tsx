@@ -54,7 +54,7 @@ const ProjectsSection = () => {
           isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-6"
         )} style={{ transitionDelay: '400ms' }}>
           <a
-            href="https://www.notion.so/dsanz/David-Sanz-a295b29f93824bfd99445b1db5fd70af?pvs=4#19dc0bb1a603800488a0ceb555fde24c"
+            href="https://dsanz.me/dsanz/19dc0bb1a6038091bd96c18df916c903?v=19dc0bb1a603817496d2000cfac88db6"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium"
