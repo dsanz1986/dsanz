@@ -46,31 +46,26 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "WOD Time",
       description: "",
-      imageUrl: "/lovable-uploads/17ce8381-1a98-4a45-9e51-5c22b4d41e00.png", // Swapped with Vofy
+      imageUrl: "/lovable-uploads/8f59834b-4ec5-4905-a66c-df3c1d4c2a46.png", // Changed to Fifa World Cup Russia 2018
       link: "https://dsanz.me/dsanz/WOD-Time-19dc0bb1a6038113991ad9807d566e6e"
     },
     {
       title: "InCity",
       description: "",
-      imageUrl: "/lovable-uploads/5ef8eb17-70b5-4670-8752-cde7fe749efb.png", // Swapped with EeOoo
+      imageUrl: "/lovable-uploads/5ef8eb17-70b5-4670-8752-cde7fe749efb.png", 
       link: "https://dsanz.me/dsanz/inCity-19dc0bb1a60381d18924db26fb4fcc83"
     },
     {
       title: "Vofy",
       description: "",
-      imageUrl: "/lovable-uploads/4ff37520-7340-4d43-98f9-47ba0cd2565a.png", // Swapped with WOD Time
+      imageUrl: "/lovable-uploads/4ff37520-7340-4d43-98f9-47ba0cd2565a.png",
       link: "https://dsanz.me/dsanz/Vofy-19dc0bb1a603813c8cfcde94b3deb5bb"
     },
-    {
-      title: "SOMOSDSGN",
-      description: "",
-      imageUrl: "https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?w=800&auto=format&fit=crop",
-      link: "https://dsanz.me/dsanz/SOMOSDSGN-51d778f082724b5a82f4951834c262a4"
-    },
+    // Removed SOMOSDSGN project
     {
       title: "Playlist Spotify con Suno IA",
       description: "",
-      imageUrl: "/lovable-uploads/e29b9a74-5a15-4124-9110-5ca3b7846664.png", // Swapped with InCity
+      imageUrl: "/lovable-uploads/e29b9a74-5a15-4124-9110-5ca3b7846664.png",
       link: "https://dsanz.me/dsanz/Playlist-Spotify-con-Suno-IA-19dc0bb1a6038148a096d47c120a2ddb"
     }
   ],
@@ -78,7 +73,7 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "Fifa World Cup Russia 2018",
       description: "",
-      imageUrl: "/lovable-uploads/8f59834b-4ec5-4905-a66c-df3c1d4c2a46.png", // Swapped with Vofy
+      imageUrl: "/lovable-uploads/8f59834b-4ec5-4905-a66c-df3c1d4c2a46.png", 
       link: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132"
     },
     {
@@ -98,13 +93,13 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "Backoffice",
       description: "",
-      imageUrl: "/lovable-uploads/7e651e27-57ea-4dd1-a075-4249654deb44.png", // Added new image
+      imageUrl: "/lovable-uploads/7e651e27-57ea-4dd1-a075-4249654deb44.png",
       link: "https://dsanz.me/dsanz/Backoffice-19dc0bb1a60381a69d89c38f8a8b7f5e"
     },
     {
       title: "Style Guide FitTasty",
       description: "",
-      imageUrl: "/lovable-uploads/bf45456f-8df1-471f-ab33-a27378b45047.png", // Added new image
+      imageUrl: "/lovable-uploads/bf45456f-8df1-471f-ab33-a27378b45047.png",
       link: "https://dsanz.me/dsanz/Style-Guide-FitTasty-19dc0bb1a60381558a71d60cad1385a3"
     }
   ]

@@ -81,8 +81,11 @@ const AboutSection = () => {
             "glass-card rounded-2xl p-6 transition-all duration-700 ease-out",
             isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
           )} style={{ transitionDelay: '300ms' }}>
-            <h3 className="text-lg font-semibold mb-4">Charlas</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <MicIcon size={18} className="text-primary" />
+              Charlas
+            </h3>
+            <ul className="space-y-0">
               {talks.map((talk, index) => (
                 <li key={index} className="group">
                   <a 
@@ -103,8 +106,11 @@ const AboutSection = () => {
             "glass-card rounded-2xl p-6 transition-all duration-700 ease-out",
             isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
           )} style={{ transitionDelay: '400ms' }}>
-            <h3 className="text-lg font-semibold mb-4">Hitos</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <AwardIcon size={18} className="text-primary" />
+              Hitos
+            </h3>
+            <ul className="space-y-0">
               {achievements.map((achievement, index) => (
                 <li key={index} className="group">
                   <a 
@@ -125,8 +131,11 @@ const AboutSection = () => {
             "glass-card rounded-2xl p-6 transition-all duration-700 ease-out",
             isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
           )} style={{ transitionDelay: '500ms' }}>
-            <h3 className="text-lg font-semibold mb-4">Posts</h3>
-            <ul className="space-y-3">
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <FileTextIcon size={18} className="text-primary" />
+              Posts
+            </h3>
+            <ul className="space-y-0">
               {posts.map((post, index) => (
                 <li key={index} className="group">
                   <a 

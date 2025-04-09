@@ -36,7 +36,7 @@ const NavBar = () => {
           className="text-xl font-medium tracking-tight transition-opacity hover:opacity-80"
         >
           <span className="sr-only">Inicio</span>
-          <span className="font-bold gradient-text">David</span>
+          <span className="font-bold gradient-text">David S.</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-8 mx-auto">
