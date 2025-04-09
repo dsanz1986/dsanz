@@ -8,7 +8,6 @@ import ExperienceSection from '@/components/ExperienceSection';
 import PrinciplesSection from '@/components/PrinciplesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import AnnouncementBar from '@/components/AnnouncementBar';
 import useScrollReveal from '@/hooks/useScrollReveal';
 
 const Index = () => {
@@ -42,7 +41,6 @@ const Index = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <AnnouncementBar />
       <NavBar />
       <main className="flex-grow">
         <Hero />
