@@ -2,8 +2,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import SectionHeader from './common/SectionHeader';
-import { MicIcon, AwardIcon, ExternalLinkIcon, FileTextIcon } from 'lucide-react';
-import { Badge } from './ui/badge';
+import { MicIcon, AwardIcon, FileTextIcon } from 'lucide-react';
 
 // Info for achievements, talks, and posts
 const talks = [
@@ -20,26 +19,22 @@ const talks = [
 const achievements = [
   {
     title: "Lola Market Mejor Producto Digital",
-    link: "https://producthackers.com/es/blog/ganadores-de-los-product-hackers-awards-2019",
-    emoji: "🏅"
+    link: "https://producthackers.com/es/blog/ganadores-de-los-product-hackers-awards-2019"
   },
   {
     title: "Lola market adquirida por Glovo",
-    link: "https://www.sngular.com/es/insights/28/enhorabuena-a-lola-market-por-convertirse-en-parte-de-glovo",
-    emoji: "💸"
+    link: "https://www.sngular.com/es/insights/28/enhorabuena-a-lola-market-por-convertirse-en-parte-de-glovo"
   }
 ];
 
 const posts = [
   {
     title: "Un día cualquiera diseñando en Lola Market",
-    link: "https://medium.com/lola-tech/undiaenlolamarket-5d07a5dfc4c4",
-    emoji: "👨‍💻"
+    link: "https://medium.com/lola-tech/undiaenlolamarket-5d07a5dfc4c4"
   },
   {
     title: "Mis primeros meses en una fintech",
-    link: "https://medium.com/davidsanzn/mis-primeros-meses-en-una-fintech-798add5ce352",
-    emoji: "📊"
+    link: "https://medium.com/davidsanzn/mis-primeros-meses-en-una-fintech-798add5ce352"
   }
 ];
 
@@ -81,12 +76,16 @@ const AboutSection = () => {
         />
         
         <div className={cn(
-          "max-w-3xl mx-auto mt-8 glass-card rounded-xl p-6 border-l-4 border-primary/50 bg-white/30 backdrop-blur-sm",
+          "max-w-3xl mx-auto mt-8 relative",
           isVisible ? "opacity-100 transform-none" : "opacity-0 transform translate-y-12"
         )}>
-          <blockquote className="text-lg md:text-xl italic text-muted-foreground leading-relaxed">
-            "Desde hace ya unos cuantos años, resolviendo problemas de usuarios y necesidades de negocio a través de productos digitales".
+          <div className="absolute -top-6 left-8 text-4xl text-primary opacity-30">"</div>
+          <blockquote className="bg-white/30 backdrop-blur-sm rounded-xl p-8 shadow-sm border-l-4 border-primary">
+            <p className="text-lg md:text-xl text-foreground leading-relaxed relative z-10">
+              Desde hace ya unos cuantos años, resolviendo problemas de usuarios y necesidades de negocio a través de productos digitales.
+            </p>
           </blockquote>
+          <div className="absolute -bottom-6 right-8 text-4xl text-primary opacity-30">"</div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
@@ -106,11 +105,8 @@ const AboutSection = () => {
                     href={talk.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                    className="block py-2 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
                   >
-                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      <ExternalLinkIcon className="h-3.5 w-3.5" />
-                    </span>
                     <span className="group-hover:underline">{talk.title}</span>
                   </a>
                 </li>
@@ -134,11 +130,8 @@ const AboutSection = () => {
                     href={achievement.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                    className="block py-2 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
                   >
-                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span>{achievement.emoji}</span>
-                    </span>
                     <span className="group-hover:underline">{achievement.title}</span>
                   </a>
                 </li>
@@ -162,11 +155,8 @@ const AboutSection = () => {
                     href={post.link} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center gap-2 text-muted-foreground group-hover:text-foreground transition-colors"
+                    className="block py-2 px-3 rounded-lg text-muted-foreground hover:text-foreground hover:bg-primary/5 transition-colors"
                   >
-                    <span className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                      <span>{post.emoji}</span>
-                    </span>
                     <span className="group-hover:underline">{post.title}</span>
                   </a>
                 </li>

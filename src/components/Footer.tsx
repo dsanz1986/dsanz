@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           
           <a
-            href="https://drive.google.com/file/d/1HTCWR2KwTZnd_OcWtKYLozp9RGSIpMjZ/view"
+            href="https://drive.google.com/file/d/1fJsf-TqffHyjNKw7nob4bQEkqzAGWQw9/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-primary hover:underline transition-colors"

@@ -61,12 +61,12 @@ const NavBar = () => {
         </nav>
 
         <a 
-          href="https://drive.google.com/file/d/1HTCWR2KwTZnd_OcWtKYLozp9RGSIpMjZ/view" 
+          href="https://drive.google.com/file/d/1fJsf-TqffHyjNKw7nob4bQEkqzAGWQw9/view?usp=sharing" 
           target="_blank"
           rel="noopener noreferrer" 
           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/50 text-primary font-medium transition-colors hover:bg-primary/5"
         >
-          Currículum
+          CV
           <Download size={16} />
         </a>
       </div>

@@ -54,19 +54,19 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#contacto"
+                href="mailto:dsanzux@gmail.com"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn-primary"
               >
                 Contactar
                 <Mail size={18} />
               </a>
               <a
-                href="https://drive.google.com/file/d/15sKeRuoDYIkcCA9fYRNeJosxyNM1nOPP/view?usp=sharing"
+                href="https://drive.google.com/file/d/1fJsf-TqffHyjNKw7nob4bQEkqzAGWQw9/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium"
               >
-                Ver Currículum
+                Ver CV
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
