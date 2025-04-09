@@ -73,7 +73,7 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "Fifa World Cup Russia 2018",
       description: "",
-      imageUrl: "/lovable-uploads/8f59834b-4ec5-4905-a66c-df3c1d4c2a46.png", 
+      imageUrl: "/lovable-uploads/9467edbb-a87a-4928-af91-c44d23da993e.png", 
       link: "https://dsanz.me/dsanz/Fifa-World-Cup-Russia-2018-19dc0bb1a603816c8701e9ae1cd3c132"
     },
     {
@@ -85,7 +85,7 @@ export const projectsByCategory: Record<ProjectCategory, Project[]> = {
     {
       title: "EeOoo",
       description: "",
-      imageUrl: "/lovable-uploads/e29b9a74-5a15-4124-9110-5ca3b7846664.png", 
+      imageUrl: "/lovable-uploads/c40ff73a-4712-4076-8316-0a2377c92999.png", 
       link: "https://dsanz.me/dsanz/EeeOoo-19dc0bb1a60381279487e929ec6a9de2"
     }
   ],
