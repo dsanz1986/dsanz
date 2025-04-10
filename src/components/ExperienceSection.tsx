@@ -1,4 +1,3 @@
-
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import SectionHeader from './common/SectionHeader';
@@ -12,7 +11,6 @@ const experiences = [
     sector: "HR Tech / Employee Engagement",
     content: "Como **Product** **Designer** en **Nailted**, teníamos la misión de mejorar el bienestar de las personas en su entorno laboral, era fundamental generar un impacto real y positivo. En este tipo de contexto, el diseño no se trata solo de crear interfaces atractivas, sino de construir experiencias humanas, funcionales y empáticas que ayuden a los usuarios a que se sientan escuchados y apoyados.",
     color: "bg-gradient-to-r from-blue-50 to-blue-100",
-    icon: "👥",
     skills: ["User Research", "Product Strategy", "UI Design", "Prototyping"]
   },
   {
@@ -22,7 +20,6 @@ const experiences = [
     sector: "E-commerce / Marketplace",
     content: "Como **Product Designer** en **Lola Market** (empresa que posteriormente fue adquirida por **Glovo**), creamos una experiencia fluida y efectiva que beneficiara tanto a los **usuarios finales**, quienes realizaban la compra desde su casa, como a los **shoppers**, responsables de recoger y entregar los pedidos. Lo más importante era entender cuales eran los retos del comercio online, optimizar la logística y garantizar que, tanto los clientes como los shoppers, tuvieran una experiencia positiva.",
     color: "bg-gradient-to-r from-yellow-50 to-yellow-100",
-    icon: "🛒",
     skills: ["UX/UI Design", "Design Systems", "User Testing", "Wireframing"]
   },
   {
@@ -32,7 +29,6 @@ const experiences = [
     sector: "Fintech / Wealth Management",
     content: "Como **Product Designer** en **Finizens**, una fintech centrada en la inversión pasiva, mi trabajo estuvo orientado a ayudar a los usuarios a gestionar su dinero de forma segura y transparente, con un enfoque diferente al modelo de inversión tradicional. Debíamos ofrecer una experiencia que combinara **transparencia, simplicidad y seguridad**, ayudando a los usuarios a confiar en un modelo de inversión muy diferente al tradicional.",
     color: "bg-gradient-to-r from-purple-50 to-purple-100",
-    icon: "💰",
     skills: ["Information Architecture", "UX Research", "Visual Design", "User Flows"]
   }
 ];
@@ -93,9 +89,6 @@ const ExperienceSection = () => {
               <div className="p-6 md:p-8">
                 <div className="flex flex-col md:flex-row justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/80 text-2xl">
-                      {experience.icon}
-                    </div>
                     <div>
                       <h3 className="text-xl font-semibold">{experience.company}</h3>
                       <p className="text-sm font-medium text-[#18134D]">{experience.role}</p>
