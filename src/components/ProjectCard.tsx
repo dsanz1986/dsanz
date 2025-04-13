@@ -1,5 +1,6 @@
 
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -36,6 +37,10 @@ const ProjectCard = ({ title, description, imageUrl, link, index }: ProjectCardP
     };
   }, [index]);
 
+  // Create URL-friendly slug from title
+  const projectSlug = title.toLowerCase().replace(/\s+/g, '-');
+  const internalLink = `/project/${projectSlug}`;
+
   return (
     <div
       ref={cardRef}
@@ -45,7 +50,7 @@ const ProjectCard = ({ title, description, imageUrl, link, index }: ProjectCardP
       )}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <a href={link} target="_blank" rel="noopener noreferrer" className="block h-full">
+      <Link to={internalLink} className="block h-full">
         <div className="aspect-video w-full overflow-hidden">
           <img
             src={imageUrl}
@@ -58,7 +63,7 @@ const ProjectCard = ({ title, description, imageUrl, link, index }: ProjectCardP
           <h3 className="text-lg font-semibold">{title}</h3>
           {description && <p className="mt-2 text-sm text-muted-foreground">{description}</p>}
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
