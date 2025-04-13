@@ -13,10 +13,7 @@ const ProjectsGrid = ({ projects }: ProjectsGridProps) => {
         <ProjectCard
           key={index}
           index={index}
-          title={project.title}
-          description={project.description}
-          imageUrl={project.imageUrl}
-          link={project.link}
+          {...project}
         />
       ))}
     </div>
