@@ -1,10 +1,16 @@
+
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Mail, Download } from 'lucide-react';
+import { Mail, ArrowRight } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,10 +27,35 @@ const ContactSection = () => {
       observer.observe(sectionRef.current);
     }
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const message = formData.get('message') as string;
+
+    // Create mailto URL with form data
+    const mailtoUrl = `mailto:dsanzux@gmail.com?subject=Mensaje de ${name}&body=${encodeURIComponent(
+      `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+    )}`;
+
+    // Open default email client
+    window.location.href = mailtoUrl;
+
+    // Show success message
+    toast({
+      title: "¡Gracias por tu mensaje!",
+      description: "Te responderé lo antes posible.",
+    });
+
+    setIsSubmitting(false);
+    e.currentTarget.reset();
+  };
 
   return (
     <section
@@ -32,34 +63,57 @@ const ContactSection = () => {
       ref={sectionRef}
       className="py-24 bg-secondary/50"
     >
-      <div className="container max-w-4xl">
+      <div className="container max-w-6xl mx-auto px-4">
         <div className={cn(
-          'glass-card rounded-2xl p-8 md:p-12 transition-all duration-700 ease-out',
+          'glass-card rounded-2xl p-8 md:p-12 transition-all duration-700 ease-out grid md:grid-cols-2 gap-12',
           isVisible ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-12'
         )}>
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">¿Hablamos?</h2>
-          <p className="text-center text-muted-foreground mb-8">
-            Si quieres que colaboremos, contáctame.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para empezar?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Desde la estrategia hasta el lanzamiento, trabajo con equipos para hacerlo realidad.
+              Hablemos sobre cómo podemos trabajar juntos.
+            </p>
+            
             <a
               href="mailto:dsanzux@gmail.com"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg gradient-btn-primary w-full sm:w-auto justify-center"
+              className="inline-flex items-center gap-2 text-lg text-foreground hover:text-primary transition-colors mb-4"
             >
-              <Mail size={18} />
-              Enviar un email
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1GcpwSeDnvTR9TdhRpOpz0Yj1uWr5t1rL/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium w-full sm:w-auto justify-center"
-            >
-              <Download size={18} />
-              Descargar CV
+              <Mail className="h-5 w-5" />
+              dsanzux@gmail.com
             </a>
           </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <Input
+              type="text"
+              name="name"
+              placeholder="Tu nombre"
+              required
+              className="bg-background/50"
+            />
+            <Input
+              type="email"
+              name="email"
+              placeholder="Tu email"
+              required
+              className="bg-background/50"
+            />
+            <Textarea
+              name="message"
+              placeholder="Cuéntame sobre tu proyecto"
+              required
+              className="min-h-[120px] bg-background/50"
+            />
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-foreground text-background hover:bg-foreground/90 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-colors"
+            >
+              Enviar mensaje
+              <ArrowRight className="h-5 w-5" />
+            </button>
+          </form>
         </div>
       </div>
     </section>
