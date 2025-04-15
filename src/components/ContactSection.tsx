@@ -1,4 +1,3 @@
-
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Mail, Download } from 'lucide-react';
@@ -34,12 +33,10 @@ const ContactSection = () => {
       className="py-24 bg-secondary/50"
     >
       <div className="container max-w-4xl">
-        <div
-          className={cn(
-            'glass-card rounded-2xl p-8 md:p-12 transition-all duration-700 ease-out',
-            isVisible ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-12'
-          )}
-        >
+        <div className={cn(
+          'glass-card rounded-2xl p-8 md:p-12 transition-all duration-700 ease-out',
+          isVisible ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-12'
+        )}>
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">¿Hablamos?</h2>
           <p className="text-center text-muted-foreground mb-8">
             Si quieres que colaboremos, contáctame.
@@ -54,7 +51,7 @@ const ContactSection = () => {
               Enviar un email
             </a>
             <a
-              href="https://drive.google.com/file/d/1HTCWR2KwTZnd_OcWtKYLozp9RGSIpMjZ/view"
+              href="https://drive.google.com/file/d/1GcpwSeDnvTR9TdhRpOpz0Yj1uWr5t1rL/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium w-full sm:w-auto justify-center"

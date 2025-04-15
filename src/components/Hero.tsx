@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Mail } from 'lucide-react';
@@ -34,7 +33,6 @@ const Hero = () => {
       ref={heroRef}
       className="min-h-screen flex flex-col justify-center pt-24 pb-16 relative overflow-hidden"
     >
-      {/* Animated background */}
       <div className="animated-bg"></div>
       
       <div className="container relative z-10">
@@ -61,7 +59,7 @@ const Hero = () => {
                 <Mail size={18} />
               </a>
               <a
-                href="https://drive.google.com/file/d/1fJsf-TqffHyjNKw7nob4bQEkqzAGWQw9/view?usp=sharing"
+                href="https://drive.google.com/file/d/1GcpwSeDnvTR9TdhRpOpz0Yj1uWr5t1rL/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-primary/50 text-primary hover:bg-primary/5 transition-colors font-medium"
