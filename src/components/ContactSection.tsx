@@ -1,7 +1,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Mail, ArrowRight, Linkedin } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
@@ -69,19 +69,30 @@ const ContactSection = () => {
           isVisible ? 'opacity-100 transform-none' : 'opacity-0 transform translate-y-12'
         )}>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Listo para empezar?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">¿Hablamos?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Desde la estrategia hasta el lanzamiento, trabajo con equipos para hacerlo realidad.
-              Hablemos sobre cómo podemos trabajar juntos.
+              Escríbeme un mensaje si quieres colaborar conmigo en algún proyecto
             </p>
             
-            <a
-              href="mailto:dsanzux@gmail.com"
-              className="inline-flex items-center gap-2 text-lg text-foreground hover:text-primary transition-colors mb-4"
-            >
-              <Mail className="h-5 w-5" />
-              dsanzux@gmail.com
-            </a>
+            <div className="flex flex-col gap-4">
+              <a
+                href="mailto:dsanzux@gmail.com"
+                className="inline-flex items-center gap-2 text-lg text-foreground hover:text-primary transition-colors"
+              >
+                <Mail className="h-5 w-5" />
+                dsanzux@gmail.com
+              </a>
+              
+              <a
+                href="https://www.linkedin.com/in/dsanzux/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-lg text-foreground hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-5 w-5" />
+                LinkedIn
+              </a>
+            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
